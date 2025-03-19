@@ -24,7 +24,7 @@
 
              StreamReader reader = new StreamReader(req.Body);
              string requestBody = await reader.ReadToEndAsync();
-             response.WriteStringAsync(requestBody);
+             await response.WriteStringAsync(requestBody);
 
              return response;
          }
